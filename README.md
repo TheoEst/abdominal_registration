@@ -63,10 +63,10 @@ Two pretraining models are given : unsupervised pretraining and supervised with 
 To recreate this models, launch the following commands :
 
 ```
-python3 -m abdominal_registration.main --crop-size 128 128 128 --val-crop-size 192 160 192 --zeros-init --workers=4 --batch-size=2 --val-batch-size 1 --epochs=300 --session-name=Pretrain_unsupervised --lr=1e-4 --instance-norm --regu-deformable-loss-weight=1e-2 --mse-loss-weight=1 --random-crop --classic-vnet --channel-multiplication 8 --deep-supervision --multi-windows --cohorts learn2reg_task3 --symmetric-training --cohorts learn2reg_task3 kits liver tcia_pancreas spleen colon pancreas hepatic --val-cohorts learn2reg_task3 --pseudo-labels
+python3 -m abdominal_registration.main --crop-size 128 128 128 --val-crop-size 192 160 192 --zeros-init --workers=4 --batch-size=2 --val-batch-size 1 --epochs=300 --session-name=Pretrain_unsupervised --lr=1e-4 --instance-norm --regu-deformable-loss-weight=1e-2 --mse-loss-weight=1 --random-crop --classic-vnet --channel-multiplication 8 --deep-supervision --multi-windows --symmetric-training --cohorts learn2reg_task3 kits liver tcia_pancreas spleen colon pancreas hepatic --val-cohorts learn2reg_task3 --pseudo-labels
 
 
-python3 -m abdominal_registration.main --crop-size 128 128 128 --val-crop-size 192 160 192 --zeros-init --workers=4 --batch-size=2 --val-batch-size 1 --epochs=300 --session-name=Pretrain_supervised --lr=1e-4 --instance-norm --regu-deformable-loss-weight=1e-2 --mse-loss-weight=1 --random-crop --classic-vnet --channel-multiplication 8 --deep-supervision --multi-windows --cohorts learn2reg_task3 --symmetric-training --cohorts learn2reg_task3 kits liver tcia_pancreas spleen colon pancreas hepatic --val-cohorts learn2reg_task3 --pseudo-labels --deformed-mask-loss
+python3 -m abdominal_registration.main --crop-size 128 128 128 --val-crop-size 192 160 192 --zeros-init --workers=4 --batch-size=2 --val-batch-size 1 --epochs=300 --session-name=Pretrain_supervised --lr=1e-4 --instance-norm --regu-deformable-loss-weight=1e-2 --mse-loss-weight=1 --random-crop --classic-vnet --channel-multiplication 8 --deep-supervision --multi-windows --symmetric-training --cohorts learn2reg_task3 kits liver tcia_pancreas spleen colon pancreas hepatic --val-cohorts learn2reg_task3 --pseudo-labels --deformed-mask-loss
 ```
 
 ## Prediction
@@ -83,6 +83,8 @@ Options :
   --save-grid           Save the grid in numpy format
 
 Examples :
+
+python3 -m abdominal_registration.main --crop-size 128 128 128 --val-crop-size 192 160 192 --batch-size=2 --val-batch-size 1  --instance-norm --classic-vnet --channel-multiplication 8 --deep-supervision --multi-windows --cohorts learn2reg_task3  --cohorts learn2reg_task3 --val --train --save-submission --model-abspath ./abdominal_registration/save/models/Baseline+symmetric+pretrain_noisy_labels.pth.tar
 
 ```
 ## Segmentation
