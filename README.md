@@ -138,6 +138,3 @@ This package was developed by Théo Estienne<sup>12</sup>
 <sup>2</sup> Université Paris-Saclay, **Institut Gustave Roussy**, Inserm, *Radiothérapie Moléculaire et Innovation Thérapeutique*, 94800, Villejuif, France.
 
 ## References
-
-
->>>>>>> a49ba2684f1da4b26249d1ef92596573fc18a5bf
