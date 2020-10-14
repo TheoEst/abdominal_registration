@@ -84,7 +84,7 @@ Options :
 
 Examples :
 
-python3 -m abdominal_registration.main --crop-size 128 128 128 --val-crop-size 192 160 192 --batch-size=2 --val-batch-size 1  --instance-norm --classic-vnet --channel-multiplication 8 --deep-supervision --multi-windows --cohorts learn2reg_task3  --cohorts learn2reg_task3 --val --train --save-submission --model-abspath ./abdominal_registration/save/models/Baseline+symmetric+pretrain_noisy_labels.pth.tar
+python3 -m abdominal_registration.predict_reg --crop-size 256 160 192 --batch-size=1 --val-batch-size 1  --instance-norm --classic-vnet --channel-multiplication 8 --deep-supervision --multi-windows --cohorts learn2reg_task3  --cohorts learn2reg_task3 --val --train --save-submission --model-abspath ./abdominal_registration/save/models/Baseline+symmetric+pretrain.pth.tar
 
 ```
 ## Segmentation
@@ -97,7 +97,7 @@ We used a modified dice loss function to train our network, such that we backpro
 Two scripts are available to train the segmentation model : *main_seg.py* and *predict_seg.py*. To recreate our experiments, launch the following commands :
 
 ```
-python3 -m abdominal_registration.main_seg  --batch-size=3 --crop-size 144 144 144 --cohorts learn2reg_task3 liver pancreas spleen tcia_pancreas kits --random-crop --lr=1e-4 --instance-norm --session-name Train_seg_multi_cohorts_tcia_kits_keep_all_label --val-crop 192 160 192 --classic-vnet --data-augmentation --epochs=400 --val-cohorts tcia_pancreas learn2reg_task3
+python3 -m abdominal_registration.main_seg  --batch-size=3 --crop-size 144 144 144 --cohorts learn2reg_task3 liver pancreas spleen tcia_pancreas kits --random-crop --lr=1e-4 --instance-norm --session-name Train_seg_multi_cohorts --val-crop 192 160 192 --classic-vnet --data-augmentation --epochs=400 --val-cohorts tcia_pancreas learn2reg_task3
 
 python3 -m abdominal_registration.predict_seg  --batch-size=1 --crop-size 256 160 192 --cohorts learn2reg_task3 liver pancreas spleen tcia_pancreas kits hepatic colon --instance-norm --classic-vnet --train --val --model-abspath ./abdominal_registration/save/models/Train_seg.pth.tar
 ```
