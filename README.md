@@ -1,9 +1,10 @@
-# Symmetric deep learning based registration using noisy segmentation labels (Learn2Reg Task 3: CT Abdominal)
+# Deep learning based registration using spatial gradients and noisy segmentation labels (Learn2Reg Task 3: CT Abdominal)
 
 
-This repository corresponds to the 2nd ranked for Task 3 (CT Abdominal) and 2nd overall method for the Learn2Reg Challenge 2020 : https://learn2reg.grand-challenge.org/.
+This repository contains a Pytorch implementation of [Deep learning based registration using spatial gradients and noisy segmentation labels](https://arxiv.org/pdf/2010.10897.pdf). It corresponds to the 2nd ranked for Task 3 (CT Abdominal) and 2nd overall method for the Learn2Reg Challenge 2020 : https://learn2reg.grand-challenge.org/.
 
-You can also consult the repository for the Task 3 : https://github.com/TheoEst/hippocampus_registration.
+
+You can also consult the repository for the Task 4 : https://github.com/TheoEst/hippocampus_registration.
 Implementation is made with Pytorch.
 
 ## Data
