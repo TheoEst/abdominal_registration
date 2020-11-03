@@ -114,13 +114,14 @@ To evaluate the performance, you need just to run the *apply_evaluation.py* file
 Results on the validation set 
 
   
-Method | Dice | Dice 30 | Hausdorff Distance
------------- | ------------- | ------------ | ------------- 
-Baseline  | 0.396 | 0.348 | 16.6 
-Baseline + sym.  | 0.411 | 0.367 | 17.1
-Baseline + sym. + pretrain | 0.538 | 0.511  | 13.6 
-Baseline + sym. + pretrain + noisy labels | **0.633** |**0.613**  | **10.4** 
-
+Method | Dice | Dice 30 | Hausdorff Distance | Jacobian
+------------ | ------------- | ------------ | ------------- | ------------- 
+Unregistered | 0.23 | 0.01 |  46.1 | 
+Baseline  | 0.384 | 0.346 | 45.2 | 1.70
+Baseline + sym.  | 0.400 | 0.358 | 45.7 | 1.67
+Baseline + sym. + pretrain | 0.522 | 0.501  | 42.3 | **0.327**
+Baseline + sym. + pretrain + noisy labels | **0.625** |**0.580**  | **39.2** | 1.77
+Test | 0.64 | 0.40 | 37.1 |  1.53
 
 Example of the results on the validation set :
 
