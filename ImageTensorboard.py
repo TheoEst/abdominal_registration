@@ -5,7 +5,7 @@ Created on Fri Jan 31 15:36:01 2020
 @author: T_ESTIENNE
 """
 import matplotlib.pyplot as plt
-import learn2reg.utils as utils
+import abdominal_registration.utils as utils
 import numpy as np
 
 def plot_registration_results(gt_sample, pred_sample, batch, args,
