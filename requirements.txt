@@ -1,0 +1,12 @@
+torch
+torchvision
+SimpleITK
+nibabel
+sklearn
+pandas
+numpy
+random
+logging
+subprocess
+argparse
+skimage
