@@ -11,7 +11,6 @@ import torch.utils.data as data
 import SimpleITK as sitk
 from tqdm import tqdm 
 import random
-import nibabel.freesurfer.mghformat as mgh
 import os
 
 end = '.nii.gz'
@@ -23,9 +22,6 @@ cohort2folder = {'liver' : 'Task03_Liver/', 'pancreas' : 'Task07_Pancreas/',
     
 def load_sitk(path):
     return sitk.GetArrayFromImage(sitk.ReadImage(path))
-
-def load_mgh(path):
-    return mgh.load(path).get_data()
 
 def load_dataset(dataset_path, cohort, segmentation=False,
                  test=False):
