@@ -9,4 +9,7 @@ logging=0.5.1.2
 argparse=1.1
 skimage=0.14.2
 tqdm=4.30
+evalutils=0.2.3
+surface_distance=0.1
+ants=0.2.5
 random
